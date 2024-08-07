@@ -67,6 +67,7 @@ body {
 
 .main {
 	background: #F8F8F8;
+	width: 100%;
 }
 
 .title-container {
@@ -222,7 +223,7 @@ body {
 	}
 
 	.content__img {
-		max-width: 45vw;
+		width: 45vw;
 	}
 
 }
