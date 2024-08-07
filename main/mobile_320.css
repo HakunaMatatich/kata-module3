@@ -40,16 +40,16 @@ body {
 .upper-menu--left-side {
 	display: flex;
 	justify-content: flex-start;
-	gap: 25px;
+	gap: 20px;
 	align-items: center;
 }
 
-.upper-menu__group-ic::after {
+.upper-menu__group-ic::before {
 	content: "";
 	position: absolute;
 	height: 32px;
-	width: 2px;
-	margin-left: 10px;
+	width: 3px;
+	margin-left: -10px;
 	margin-top: 11px;
 	background-color: #EAEAEA;
 }
@@ -59,16 +59,14 @@ body {
 }
 
 .upper-menu--right-side {
-		display: flex;
-		justify-content: flex-end;
-		gap: 20px;
-		align-items: center;
+	display: flex;
+	justify-content: flex-end;
+	gap: 20px;
+	align-items: center;
 }
 
 .main {
 	background: #F8F8F8;
-
-
 }
 
 .title-container {
@@ -120,15 +118,13 @@ body {
 }
 
 .item:hover {
-	/* transform: scale(110%); */
 	background-color: #FFFFFF;
 	border: 2px solid #B8FFEC;
 	border-radius: 5px;
-
 }
 
 .content {
-	margin-top: 15px;
+	margin: 25px 15px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -175,4 +171,93 @@ body {
 	overflow: hidden;
 }
 
+.upper-menu--middle-side {
+	display: none;
+}
 
+.main__title-icons {
+	display: none;
+}
+
+@media (min-width: 760px) and (max-width: 1119px) {
+	.upper-menu__group-ic::after {
+		content: "";
+		position: absolute;
+		height: 32px;
+		width: 3px;
+		margin-left: 10px;
+		margin-top: 11px;
+		background-color: #EAEAEA;
+	}
+
+	.upper-menu__group-ic::before {
+		display: none;
+	}
+
+	.upper-menu--middle-side {
+		display: flex;
+		justify-content: flex-start;
+		gap: 17px;
+	}
+
+	.upper-menu__container {
+		width: auto;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		align-content: space-between;
+	}
+	
+	.upper-menu__divider {
+		margin-top: 5px;
+	}
+
+	.content {
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	.content__container {
+		max-height: 50vh;
+	}
+
+	.content__img {
+		max-width: 45vw;
+	}
+
+}
+
+@media (min-width: 1120px) {
+	.content {
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	.content__container {
+		max-height: 50vh;
+	}
+
+	.upper-menu {
+		display: none;
+	}
+
+	.title-container {
+		margin-top: 30px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.main__title-icons {
+		display: flex;
+		gap: 20px;
+		font-size: 16px;
+		line-height: 24px;
+		margin-right: 25px;
+	}
+
+	.i-container {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+	}
+}
